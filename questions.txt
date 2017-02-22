@@ -1,0 +1,12 @@
+1.  stdint.h is a c standard library that provides code to typedefs that can specify exact-width integer types. 
+2.  using an exact-width integer type is useful for embedded programming or hardware manipulation that required exact widths and placement of bytes. 
+3.  BYTE = 1 byte. DWORD = 4 bytes. LONG = 4 bytes. WORD = 2 bytes.
+4.  first two bytes of  BMP file are bfType, which refers to the file type, must be BM.
+5.  bfSize, is the size in bytes of the bitmap file. biSize is the number of bytes required by the structure.
+6.  If biHeight is negative, the bitmap is a top-down DIB and its origin is the upper-left corner.
+7.  biBitCount
+8.  It could return NULL if one of the files is the incorrect type, or the computer is out of memory. 
+9.  so that fread only reads one element at a time. 
+10. 3
+11. fseek moves a position indicator in a stream a certain number of bytes relaitve to whence. This allows us to move our position in a file. 
+12. offset is relative to the current position indicator. 
