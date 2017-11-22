@@ -1,0 +1,15 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is the longest possible word loaded from the dictionary. It was invented by 
+    the president of the National Puzzlers' League and is the longest word in the English language published in a dictionary. 
+1.  returns the resource useage of the "who" argument.
+2.  16
+3.  Because getrusage returns resource usage in the structure pointed to by the struct rusage *usage argument. we need to pass calculate 
+    the address of before and after so that the calculations can be performed. 
+4.  Main uses a for-lop with fgetc to read a file stream character by character until it reaches the end of the file. 
+    The loop starts with initializing the varaible 'c' to get the first character from the file stream. The loop will 
+    continue to receive characters from the file stream until it reachs the end of the file. Inside the loop, each char is checked
+    whether it is an alpha-character/apostrophie, numeric, or longer than the maximium sized word. If the word contains an alpha character 
+    or is too long, the word is continued to be read through program until end of word is reached and the loop moves on to the next word. 
+    Each time it cycles through the conditions, the loop is incremented by getting the next character from the file stream.
+5.  fscanf reads whole strings and doesn't keep track of each character read like fgetc does. If we 
+    gave fscanf a word greater than the max length it could overwrite memory unintentionally or cause a seg fault.
+6.  We declare load and check using constant pointers so that they cannot be made to point at any other data. 
