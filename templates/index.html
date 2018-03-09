@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <table class ="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan = "4"></td>
+                <td>{{ total }}</td>
+            </tr>
+            <tr>
+                <form action="{{ url_for('index') }}" method="post">
+                    <fieldset>
+                        <div class="form-group">
+                            <input class="form-control" name="deposit" placeholder="Deposit $" type="text"/>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default" type="submit">Deposit</button>
+                            </div>
+                    </fieldset>
+                        </form>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+            {% for stock in portfolios %}
+                <tr>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["name"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td>{{ stock["price"] }}</td>
+                    <td>{{ stock["total"] }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td colspan = "4">CASH</td>
+                <td>{{ balance }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+        
+    
+    
+    
+
+
+{% endblock %}
